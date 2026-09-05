@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Espaço reservado para a foto do casal fundador da AJ Play Park">
+  <title>Foto do casal fundador — em breve</title>
+  <!--
+    PLACEHOLDER TEMPORÁRIO — AJ PLAY PARK
+    Substituir por: assets/images/casal-fundadores.webp (foto real do Adriano e da Jaqueline).
+    Instruções completas em LEIA-ME.md, seção "Pendências".
+  -->
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D6F0FA"/>
+      <stop offset="100%" stop-color="#FBF6EF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#fundo)"/>
+
+  <!-- nuvens decorativas -->
+  <g fill="#FFFFFF" opacity=".75">
+    <ellipse cx="140" cy="96" rx="70" ry="26"/>
+    <ellipse cx="112" cy="82" rx="40" ry="28"/>
+    <ellipse cx="666" cy="140" rx="58" ry="22"/>
+    <ellipse cx="642" cy="128" rx="34" ry="24"/>
+  </g>
+
+  <!-- balões -->
+  <g opacity=".85">
+    <ellipse cx="96" cy="352" rx="26" ry="30" fill="#E86A92"/>
+    <path d="M96 382 q10 22 -4 44" stroke="#23233A" stroke-width="2.5" fill="none" opacity=".35"/>
+    <ellipse cx="704" cy="330" rx="22" ry="26" fill="#F5B301"/>
+    <path d="M704 356 q-10 20 3 40" stroke="#23233A" stroke-width="2.5" fill="none" opacity=".35"/>
+  </g>
+
+  <!-- casal (silhuetas) -->
+  <g transform="translate(400 300)">
+    <circle cx="-62" cy="-62" r="46" fill="#7EC8E3"/>
+    <path d="M-62 -8 c-52 0 -84 34 -84 78 v42 h168 v-42 c0 -44 -32 -78 -84 -78 z" fill="#2E6FB8"/>
+    <circle cx="62" cy="-62" r="46" fill="#F7C9D6"/>
+    <path d="M62 -8 c-52 0 -84 34 -84 78 v42 h168 v-42 c0 -44 -32 -78 -84 -78 z" fill="#E86A92"/>
+    <!-- coração entre os dois -->
+    <path d="M0 -104 c-9 -16 -34 -14 -34 8 c0 18 22 30 34 42 c12 -12 34 -24 34 -42 c0 -22 -25 -24 -34 -8 z" fill="#F07C1F"/>
+  </g>
+
+  <text x="400" y="470" text-anchor="middle" font-family="'Baloo 2','Nunito',system-ui,sans-serif"
+        font-size="40" font-weight="700" fill="#1D4E85">Adriano e Jaqueline</text>
+  <text x="400" y="516" text-anchor="middle" font-family="'Nunito',system-ui,sans-serif"
+        font-size="25" font-weight="600" fill="#4A4A63">Foto do casal fundador em breve</text>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i '' 's|http://127.0.0.1:\\\\${PORT}/json/list|http://[::1]:${PORT}/json/list|' /private/tmp/claude-502/-Users-filipegoularte-Downloads-aj-play-park/e0a6c6a5-be3f-4f8c-b743-073180afc0f9/scratchpad/cdp.mjs)",
+      "Bash(node /private/tmp/claude-502/-Users-filipegoularte-Downloads-aj-play-park/e0a6c6a5-be3f-4f8c-b743-073180afc0f9/scratchpad/cdp.mjs 9222 http://127.0.0.1:8765/index.html 390 844 mobile celular)",
+      "Bash(node /private/tmp/claude-502/-Users-filipegoularte-Downloads-aj-play-park/e0a6c6a5-be3f-4f8c-b743-073180afc0f9/scratchpad/medir.mjs)",
+      "Bash(python3 -c ' *)",
+      "Read(//private/tmp/claude-502/-Users-filipegoularte/-Users-filipegoularte-Downloads-aj-play-park/e0a6c6a5-be3f-4f8c-b743-073180afc0f9/scratchpad/**)",
+      "Bash(curl -sS -o /dev/null -w \"favicon.webp -> HTTP %{http_code} %{content_type} %{size_download}B\\\\n\" http://127.0.0.1:8765/assets/images/favicon.webp)",
+      "Bash(pkill -f \"remote-debugging-port=9222\")",
+      "Bash(pkill -f \"http.server 8765\")",
+      "Bash(node /private/tmp/claude-502/-Users-filipegoularte-Downloads-aj-play-park/e0a6c6a5-be3f-4f8c-b743-073180afc0f9/scratchpad/csp.mjs)",
+      "Bash(awk '{printf \"%-30s %6.1f KB\\\\n\", $9, $5/1024}')",
+      "WebFetch(domain:www.instagram.com)",
+      "WebSearch",
+      "WebFetch(domain:www.threads.net)",
+      "Bash(ls /System/Library/Fonts/Supplemental/ 2>/dev/null | grep -iE \"^\\(arial|helvetica|verdana\\)\" | head -8; ls /System/Library/Fonts/ | grep -iE \"sfns|helvet\" | head -5)",
+      "Read(//System/Library/Fonts/Supplemental/**)",
+      "Read(//System/Library/Fonts/**)",
+      "Bash(node /private/tmp/claude-502/-Users-filipegoularte-Downloads-aj-play-park/e0a6c6a5-be3f-4f8c-b743-073180afc0f9/scratchpad/cdp.mjs 9222 http://127.0.0.1:8765/index.html 390 844 mobile final)",
+      "Bash(sed -i '' 's|_teste-csp.html|_t.html|' /private/tmp/claude-502/-Users-filipegoularte-Downloads-aj-play-park/e0a6c6a5-be3f-4f8c-b743-073180afc0f9/scratchpad/csp.mjs)"
+    ]
+  }
+}

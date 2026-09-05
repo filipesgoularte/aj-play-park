@@ -1,0 +1,72 @@
+# ==============================================================================
+# AJ PLAY PARK — configuração do servidor (Hostinger / Apache / LiteSpeed)
+# HTTPS forçado, cabeçalhos de segurança, tipos de arquivo e cache.
+# A Content-Security-Policy fica no <meta> do index.html.
+# ==============================================================================
+
+# ----- HTTPS obrigatório -------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Imagens em alta resolução: ficam no projeto como arquivo, mas fora do ar.
+  RewriteRule ^assets/images/originais/ - [F,L]
+</IfModule>
+
+# ----- Cabeçalhos de segurança -------------------------------------------------
+<IfModule mod_headers.c>
+  # Impede que a página seja embutida em iframe de outro site (clickjacking).
+  Header always set Content-Security-Policy "frame-ancestors 'none'"
+  Header always set X-Frame-Options "DENY"
+
+  # O navegador não tenta adivinhar o tipo do arquivo.
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Não revela o endereço completo da página a sites externos.
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Desliga recursos que a página não usa.
+  Header always set Permissions-Policy "camera=(), geolocation=(), microphone=(), payment=()"
+
+  # Depois da primeira visita por HTTPS, o navegador recusa HTTP por 6 meses.
+  # SÓ funciona com o certificado SSL já ativo.
+  Header always set Strict-Transport-Security "max-age=15768000" env=HTTPS
+
+  Header always unset X-Powered-By
+
+  # Cache: imagens praticamente não mudam; o HTML é sempre revalidado para
+  # que uma correção apareça na hora.
+  <FilesMatch "\.(webp|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ----- Arquivos que não devem ser públicos -------------------------------------
+Options -Indexes
+
+<FilesMatch "^\.|\.(md|log|bak|old|zip)$">
+  Require all denied
+</FilesMatch>
+
+# ----- Tipos de arquivo --------------------------------------------------------
+# Necessário porque o "nosniff" acima impede o navegador de corrigir um tipo errado.
+<IfModule mod_mime.c>
+  AddType image/webp    .webp
+  AddType image/svg+xml .svg
+  AddDefaultCharset UTF-8
+</IfModule>
+
+# ----- Compressão --------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
+
+DirectoryIndex index.html

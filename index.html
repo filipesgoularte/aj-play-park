@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Não escreva CSS nem JavaScript dentro deste arquivo: a política abaixo
+     bloqueia código embutido, e é isso que protege a página contra injeção.
+     Para ativar Google Ads / Meta Ads: item 9.5 do PROJETO-LANDING-PAGE.md. -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none';
+  form-action 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:;
+  connect-src 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<title>AJ Play Park | Carretinha Playground para Festas em Jundiaí e Itupeva</title>
+<meta name="description" content="Carretinha playground para aniversários, chácaras, escolas e eventos em Jundiaí e Itupeva. Levamos, montamos e retiramos tudo. Você só aproveita!">
+<meta name="theme-color" content="#2E6FB8">
+
+<!-- AO PUBLICAR: descomente as 2 linhas e troque SEU-DOMINIO.com.br pelo
+     endereço real, senão o link compartilhado não mostra a imagem de prévia.
+<link rel="canonical" href="https://SEU-DOMINIO.com.br/">
+<meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/images/fotos/carretinha-toboga-completa.webp">
+-->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="AJ Play Park | Carretinha Playground em Jundiaí e Itupeva">
+<meta property="og:description" content="Carretinha playground completa de 2 andares: pula-pula, piscina de bolinhas, tobogã e obstáculos. Levamos, montamos e retiramos tudo.">
+
+<link rel="icon" type="image/webp" href="assets/images/favicon.webp">
+<link rel="preload" as="image" href="assets/images/fotos/carretinha-toboga-completa.webp" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/style.css?v=20260905-fotos">
+
+<!-- Sem "defer" de propósito: senão o conteúdo pisca ao carregar. -->
+<script src="assets/js/main.js?v=20260905-fotos"></script>
+</head>
+<body>
+
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- Fica no início do documento para quem navega por teclado achar as opções
+     logo; o CSS o posiciona no rodapé da tela. -->
+<section class="aviso-cookies" id="aviso-cookies" hidden>
+  <div class="aviso-cookies-conteudo">
+    <div>
+      <h2>Este site usa cookies</h2>
+      <p>
+        Usamos cookies para melhorar a sua experiência e medir o resultado dos nossos
+        anúncios. Nenhum cookie de medição é ativado sem a sua autorização. Você pode
+        mudar de ideia quando quiser, pelo link “Gerenciar cookies” no rodapé.
+        Saiba mais na
+        <a href="https://agencia.golts.com.br/politica/" target="_blank" rel="noopener noreferrer">Política de Privacidade e Cookies</a>.
+      </p>
+    </div>
+    <div class="aviso-cookies-acoes">
+      <button class="botao-cookies botao-cookies--recusar" id="cookies-recusar" type="button">Recusar</button>
+      <button class="botao-cookies botao-cookies--aceitar" id="cookies-aceitar" type="button">Aceitar</button>
+    </div>
+  </div>
+</section>
+
+<!-- Ícone do WhatsApp desenhado uma vez e reaproveitado com <use>. -->
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icone-whatsapp" viewBox="0 0 24 24">
+    <path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 22c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.6.9.9-3.5-.2-.4C2.6 16 2 14 2 12 2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm5.5-7.5c-.3-.1-1.7-.8-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4 0-.1-.2-.2-.5-.4z"/>
+  </symbol>
+</svg>
+
+<main id="conteudo">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="ceu" aria-hidden="true">
+      <div class="nuvem nuvem--1"></div>
+      <div class="nuvem nuvem--2"></div>
+      <div class="nuvem nuvem--3"></div>
+      <div class="balao balao-c1"></div>
+      <div class="balao balao-c2"></div>
+      <div class="balao balao-c3"></div>
+      <div class="balao balao-c4"></div>
+      <div class="balao balao-c5"></div>
+      <div class="balao balao-c6"></div>
+      <div class="balao balao-c7"></div>
+      <div class="balao balao-c8"></div>
+      <div class="balao balao-c9"></div>
+    </div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo" src="assets/images/logo-aj-play-park.webp" alt="Logo AJ Play Park" width="80" height="80">
+          <span class="hero-local">JUNDIAÍ &amp; ITUPEVA · SP</span>
+          <h1>Uma carretinha.<br>Uma festa inteira de <em>diversão.</em></h1>
+          <p>Pula-pula, piscina de bolinhas, tobogã e obstáculos em dois andares. A gente leva, monta e retira. Você aproveita a festa.</p>
+          <a class="cta-whatsapp" href="https://api.whatsapp.com/send/?phone=5511924882904&amp;text=Ol%C3%A1%21+Vi+o+an%C3%BAncio+da+Carretinha+Playground+e+quero+garantir+a+data+da+minha+festa.+Me+envie+o+or%C3%A7amento+de+voc%C3%AAs.+A+data+ser%C3%A1%3A" target="_blank" rel="noopener noreferrer">
+            <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+            Fazer orçamento agora
+          </a>
+          <p class="hero-meta">Do primeiro contato à montagem, direto com os donos</p>
+        </div>
+        <div class="hero-img">
+          <div class="circulo-decorativo c1" aria-hidden="true"></div>
+          <div class="circulo-decorativo c2" aria-hidden="true"></div>
+          <div class="moldura">
+            <img src="assets/images/fotos/carretinha-toboga-completa.webp" alt="Carretinha AJ Play Park com tobogã azul e rosa montada no gramado" width="1079" height="1244" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cena editorial: o balão percorre três momentos conforme a rolagem. -->
+  <section class="jornada" aria-label="A alegria está a caminho">
+    <div class="jornada-palco">
+      <div class="jornada-orbita" aria-hidden="true"></div>
+      <div class="jornada-balao" aria-hidden="true">
+        <svg viewBox="0 0 280 450" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="latex" cx="32%" cy="23%" r="78%">
+              <stop offset="0" stop-color="#fff3cc"/>
+              <stop offset=".24" stop-color="#ffdc76"/>
+              <stop offset=".62" stop-color="#f7b729"/>
+              <stop offset=".88" stop-color="#db8011"/>
+              <stop offset="1" stop-color="#a84c13"/>
+            </radialGradient>
+            <linearGradient id="reflexo" x2="1" y2="1">
+              <stop stop-color="#fff" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M140 266 C90 320 193 331 145 386 S119 422 150 447" fill="none" stroke="#b47b40" stroke-width="2"/>
+          <path d="M132 251 L124 271 Q140 278 155 271 L146 251" fill="#d08a1d"/>
+          <path d="M140 12 C-14 12 -8 188 111 250 Q140 277 169 250 C288 188 294 12 140 12Z" fill="url(#latex)"/>
+          <ellipse cx="84" cy="80" rx="23" ry="42" transform="rotate(31 84 80)" fill="url(#reflexo)"/>
+          <path d="M203 59 Q246 126 202 194" fill="none" stroke="#fff4c8" stroke-opacity=".3" stroke-width="3"/>
+          <path d="m139 108 8 17 19 3-14 13 3 19-16-9-17 9 4-19-14-13 19-3Z" fill="#fff9e8" fill-opacity=".8"/>
+        </svg>
+      </div>
+      <div class="jornada-textos container">
+        <div class="jornada-cena"><span class="jornada-numero">01 / A EXPECTATIVA</span><h2>Uma festa.<br>Mil <em>possibilidades.</em></h2><p>A alegria começa muito antes do primeiro convidado chegar.</p></div>
+        <div class="jornada-cena"><span class="jornada-numero">02 / A DESCOBERTA</span><h2>A diversão<br>ganha <em>altura.</em></h2><p>Dois andares. Quatro brinquedos.<br>Um mundo inteiro para explorar.</p></div>
+        <div class="jornada-cena"><span class="jornada-numero">03 / A MEMÓRIA</span><h2>Pequenos momentos.<br><em>Grandes sorrisos.</em></h2><p>Nós levamos a brincadeira.<br>Vocês ficam com as melhores lembranças.</p></div>
+      </div>
+      <div class="jornada-rodape" aria-hidden="true"><span>ROLE PARA A DIVERSÃO CONTINUAR ↓</span><div class="jornada-progresso"><i></i></div><span>AJ PLAY PARK</span></div>
+    </div>
+  </section>
+
+  <!-- ===== SELOS ===== -->
+  <section class="selos revelar">
+    <div class="container">
+      <div class="selos-grid">
+        <div class="selo-item">
+          <h3>Estrutura Segura e Certificada</h3>
+          <p>Fabricação certificada e vistoria antes de cada festa.</p>
+        </div>
+        <div class="selo-item">
+          <h3>Higienização Completa</h3>
+          <p>Limpeza completa entre um evento e outro.</p>
+        </div>
+        <div class="selo-item">
+          <h3>Dois Andares de Diversão</h3>
+          <p>Mais espaço para brincar ocupando o mesmo canto do quintal.</p>
+        </div>
+        <div class="selo-item">
+          <h3>Atendimento de Família</h3>
+          <p>Você trata direto com os donos, do primeiro contato ao fim da festa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== A CARRETINHA ===== -->
+  <section class="carretinha revelar">
+    <div class="ceu" aria-hidden="true">
+      <div class="nuvem nuvem--4"></div>
+      <div class="nuvem nuvem--5"></div>
+    </div>
+    <div class="container container--acima">
+      <div class="cabecalho-secao">
+        <span class="etiqueta">A Carretinha</span>
+        <h2>Quatro jeitos de brincar.<br>Um só lugar.</h2>
+        <p>São quatro brinquedos ligados entre si: a criança troca de um para o outro sem precisar sair do lugar.</p>
+      </div>
+      <div class="brinquedos-grid">
+        <div class="card-brinquedo revelar">
+          <div class="brinquedo-icone"><img src="assets/images/pula-pula.webp" alt="" width="72" height="72" loading="lazy"></div>
+          <h3>Pula Pula</h3>
+          <p>Onde a energia da criançada finalmente encontra destino.</p>
+        </div>
+        <div class="card-brinquedo revelar">
+          <div class="brinquedo-icone"><img src="assets/images/piscina-de-bolinhas.webp" alt="" width="72" height="72" loading="lazy"></div>
+          <h3>Piscina de Bolinhas</h3>
+          <p>O canto preferido dos menores, que ficam ali a festa inteira.</p>
+        </div>
+        <div class="card-brinquedo revelar">
+          <div class="brinquedo-icone"><img src="assets/images/toboga.webp" alt="" width="72" height="72" loading="lazy"></div>
+          <h3>Tobogã</h3>
+          <p>Desce, sobe a escada e desce de novo. E de novo.</p>
+        </div>
+        <div class="card-brinquedo revelar">
+          <div class="brinquedo-icone"><img src="assets/images/obstaculos.webp" alt="" width="72" height="72" loading="lazy"></div>
+          <h3>Obstáculos</h3>
+          <p>Um circuito para vencer, que rende disputa entre os maiores.</p>
+        </div>
+      </div>
+      <div class="destaque-carretinha">
+        <div>
+          <h3>Quanto custa levar a carretinha até a sua festa?</h3>
+          <p>Mande uma mensagem e receba o valor, o que está incluso e as datas ainda livres do mês.</p>
+        </div>
+        <a class="cta-whatsapp" href="https://api.whatsapp.com/send/?phone=5511924882904&amp;text=Ol%C3%A1%21+Vi+o+an%C3%BAncio+da+Carretinha+Playground+e+quero+garantir+a+data+da+minha+festa.+Me+envie+o+or%C3%A7amento+de+voc%C3%AAs.+A+data+ser%C3%A1%3A" target="_blank" rel="noopener noreferrer">
+          <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+          Fazer orçamento agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria galeria-editorial" id="fotos">
+    <div class="container">
+      <div class="cabecalho-secao"><span class="etiqueta">Por dentro da brincadeira</span><h2>A diversão tem endereço.<br>O da sua festa.</h2><p>Da vista completa aos detalhes: conheça nossa carretinha em fotos reais. Toque para ampliar.</p></div>
+      <div class="album-grid">
+        <a class="album-foto" href="assets/images/fotos/carretinha-vista-lateral.webp" aria-label="Ampliar vista lateral da carretinha"><figure><img src="assets/images/fotos/carretinha-vista-lateral.webp" alt="Vista lateral da carretinha com pula-pula e tobogã no gramado" width="1280" height="720" loading="lazy"><figcaption><span>Nossa carretinha, por inteiro</span><span aria-hidden="true">↗</span></figcaption></figure></a>
+        <div class="album-nota"><span class="etiqueta">A brincadeira vai até você</span><h3>O espaço da festa.<br>O mundo deles.</h3><p>Uma estrutura de dois andares que reúne pula-pula, piscina de bolinhas, tobogã e obstáculos.</p><dl><div><dt>04</dt><dd>brinquedos conectados</dd></div><div><dt>02</dt><dd>andares para explorar</dd></div></dl><p>Atendemos Jundiaí e Itupeva. Consulte a disponibilidade e confirme as medidas do local com a gente.</p></div>
+      </div>
+      <div class="album-detalhes">
+        <a class="album-foto" href="assets/images/fotos/carretinha-toboga-detalhe.webp" aria-label="Ampliar: Tobogã azul e rosa"><figure><img src="assets/images/fotos/carretinha-toboga-detalhe.webp" alt="Tobogã azul e rosa" width="1080" height="1295" loading="lazy"><figcaption><span>Tobogã azul e rosa</span><span aria-hidden="true">↗</span></figcaption></figure></a>
+        <a class="album-foto" href="assets/images/fotos/carretinha-obstaculos-interior.webp" aria-label="Ampliar: Por dentro dos obstáculos"><figure><img src="assets/images/fotos/carretinha-obstaculos-interior.webp" alt="Por dentro dos obstáculos" width="1080" height="1425" loading="lazy"><figcaption><span>Por dentro dos obstáculos</span><span aria-hidden="true">↗</span></figcaption></figure></a>
+        <a class="album-foto" href="assets/images/fotos/carretinha-pula-pula.webp" aria-label="Ampliar: Espaço para pular"><figure><img src="assets/images/fotos/carretinha-pula-pula.webp" alt="Espaço para pular" width="443" height="573" loading="lazy"><figcaption><span>Espaço para pular</span><span aria-hidden="true">↗</span></figcaption></figure></a>
+        <a class="album-foto" href="assets/images/fotos/carretinha-redes-interior.webp" aria-label="Ampliar: Detalhes da estrutura e das redes"><figure><img src="assets/images/fotos/carretinha-redes-interior.webp" alt="Detalhes da estrutura e das redes" width="1079" height="1434" loading="lazy"><figcaption><span>Detalhes da estrutura e das redes</span><span aria-hidden="true">↗</span></figcaption></figure></a>
+        <a class="album-foto" href="assets/images/fotos/carretinha-montada.webp" aria-label="Ampliar: A carretinha montada"><figure><img src="assets/images/fotos/carretinha-montada.webp" alt="A carretinha montada" width="1288" height="966" loading="lazy"><figcaption><span>A carretinha montada</span><span aria-hidden="true">↗</span></figcaption></figure></a>
+        <a class="album-foto" href="assets/images/fotos/carretinha-iluminada.webp" aria-label="Ampliar: A brincadeira também ganha luz"><figure><img src="assets/images/fotos/carretinha-iluminada.webp" alt="A brincadeira também ganha luz" width="1084" height="1440" loading="lazy"><figcaption><span>A brincadeira também ganha luz</span><span aria-hidden="true">↗</span></figcaption></figure></a>
+      </div>
+    </div>
+  </section>
+  <dialog class="foto-dialog" aria-label="Fotos ampliadas da carretinha">
+    <button class="foto-fechar" type="button" aria-label="Fechar foto" autofocus>Fechar ×</button>
+    <img alt="" draggable="false">
+    <div class="foto-navegacao">
+      <button class="foto-anterior" type="button" aria-label="Foto anterior">← Anterior</button>
+      <span class="foto-contador" aria-live="polite" aria-atomic="true"></span>
+      <button class="foto-proxima" type="button" aria-label="Próxima foto">Próxima →</button>
+    </div>
+    <p></p>
+  </dialog>
+
+  <!-- ===== ONDE A CARRETINHA CHEGA ===== -->
+  <section class="eventos revelar">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="etiqueta etiqueta--rosa">Onde a Carretinha Chega</span>
+        <h2>Do quintal de casa ao pátio da escola</h2>
+      </div>
+      <div class="eventos-grid">
+        <div class="evento-item">
+          <div class="evento-icone"><img src="assets/images/aniversarios.webp" alt="" width="60" height="60" loading="lazy"></div>
+          <h3>Aniversários</h3>
+          <p>A atração que segura a turma do bolo até a hora de ir embora.</p>
+        </div>
+        <div class="evento-item">
+          <div class="evento-icone"><img src="assets/images/chacaras.webp" alt="" width="60" height="60" loading="lazy"></div>
+          <h3>Chácaras</h3>
+          <p>Aproveita o gramado que a chácara já tem de sobra.</p>
+        </div>
+        <div class="evento-item">
+          <div class="evento-icone"><img src="assets/images/escolas.webp" alt="" width="60" height="60" loading="lazy"></div>
+          <h3>Escolas</h3>
+          <p>Festa junina, Dia das Crianças e fim de ano letivo.</p>
+        </div>
+        <div class="evento-item">
+          <div class="evento-icone"><img src="assets/images/eventos-gerais.webp" alt="" width="60" height="60" loading="lazy"></div>
+          <h3>Eventos em Geral</h3>
+          <p>Confraternizações, ações em condomínio e eventos de bairro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMO FUNCIONA ===== -->
+  <section class="como revelar">
+    <div class="ceu" aria-hidden="true">
+      <div class="balao balao-c1"></div>
+      <div class="balao balao-c3"></div>
+      <div class="balao balao-c6"></div>
+    </div>
+    <div class="container container--acima">
+      <div class="cabecalho-secao">
+        <span class="etiqueta etiqueta--branca">Como Funciona</span>
+        <h2>Simples para você, mágico para as crianças</h2>
+      </div>
+      <div class="passos-grid">
+        <div class="passo revelar">
+          <div class="passo-numero" aria-hidden="true">1</div>
+          <h3>Você escolhe a data</h3>
+          <p>Você manda a data e o endereço. A gente consulta a disponibilidade para você.</p>
+        </div>
+        <div class="passo revelar">
+          <div class="passo-numero" aria-hidden="true">2</div>
+          <h3>Nós levamos e montamos</h3>
+          <p>Chegamos antes do horário combinado e entregamos tudo montado.</p>
+        </div>
+        <div class="passo revelar">
+          <div class="passo-numero" aria-hidden="true">3</div>
+          <h3>Você só aproveita</h3>
+          <p>No fim da festa, desmontamos tudo e a carretinha vai embora. Você nem percebe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUEM SOMOS ===== -->
+  <section class="quem-somos revelar" id="quem-somos">
+    <div class="container">
+      <div class="quem-grid">
+        <div class="quem-retratos">
+          <figure class="quem-familia"><img src="assets/images/fotos/familia-aj-play-park.webp" alt="Adriano, Jaqueline e sua família reunidos ao ar livre" width="1440" height="1080" loading="lazy"><figcaption>Uma família por trás de cada festa.</figcaption></figure>
+          <figure class="quem-casal"><img src="assets/images/fotos/adriano-jaqueline-retrato.webp" alt="Adriano e Jaqueline, fundadores da AJ Play Park" width="1081" height="1440" loading="lazy"><figcaption>Adriano &amp; Jaqueline</figcaption></figure>
+        </div>
+        <div class="quem-texto">
+          <span class="etiqueta etiqueta--creme">Quem Somos</span>
+          <h2>Uma família que <span>leva alegria</span> por onde passa</h2>
+          <p>Somos uma família que sempre sonhou em empreender juntos e levar alegria para outras pessoas. Foi assim que nasceu a AJ Play Park: com amor, dedicação e o propósito de tornar cada festa mais divertida e inesquecível.</p>
+          <p>Você conversa diretamente com os donos, desde a escolha da data até a montagem. Um atendimento próximo para organizar a brincadeira com você.</p>
+          <a class="cta-whatsapp" href="https://api.whatsapp.com/send/?phone=5511924882904&amp;text=Ol%C3%A1%21+Vi+o+an%C3%BAncio+da+Carretinha+Playground+e+quero+garantir+a+data+da+minha+festa.+Me+envie+o+or%C3%A7amento+de+voc%C3%AAs.+A+data+ser%C3%A1%3A" target="_blank" rel="noopener noreferrer">
+            <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+            Fazer orçamento agora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (o primeiro item já vem aberto) ===== -->
+  <section class="faq revelar">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="etiqueta etiqueta--creme">Perguntas Frequentes</span>
+        <h2>Tire suas dúvidas</h2>
+      </div>
+
+      <div class="faq-item aberto">
+        <h3 class="faq-titulo">
+          <button class="faq-pergunta" type="button" aria-expanded="true" aria-controls="faq-r1">
+            <span>Onde a carretinha atende</span><span class="sinal" aria-hidden="true">+</span>
+          </button>
+        </h3>
+        <div class="faq-resposta" id="faq-r1">
+          <div><p>Atendemos exclusivamente Jundiaí e Itupeva. Se a sua festa é em uma dessas cidades, é só escolher a data.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-titulo">
+          <button class="faq-pergunta" type="button" aria-expanded="false" aria-controls="faq-r2">
+            <span>A estrutura é segura para as crianças</span><span class="sinal" aria-hidden="true">+</span>
+          </button>
+        </h3>
+        <div class="faq-resposta" id="faq-r2">
+          <div><p>Sim. Ela é fechada com redes de proteção em toda a volta, nos dois andares, para ninguém escorregar para fora. Só liberamos as crianças depois de conferir a montagem inteira.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-titulo">
+          <button class="faq-pergunta" type="button" aria-expanded="false" aria-controls="faq-r3">
+            <span>Os brinquedos são higienizados</span><span class="sinal" aria-hidden="true">+</span>
+          </button>
+        </h3>
+        <div class="faq-resposta" id="faq-r3">
+          <div><p>Sim. Cada brinquedo é limpo individualmente antes de a carretinha sair para a festa seguinte.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-titulo">
+          <button class="faq-pergunta" type="button" aria-expanded="false" aria-controls="faq-r4">
+            <span>Preciso de quanto espaço no local</span><span class="sinal" aria-hidden="true">+</span>
+          </button>
+        </h3>
+        <div class="faq-resposta" id="faq-r4">
+          <div><p>Ela é pensada para caber em quintal de casa, área de condomínio e chácara. Ao pedir o orçamento, informe as medidas do local que confirmamos se ela entra.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-titulo">
+          <button class="faq-pergunta" type="button" aria-expanded="false" aria-controls="faq-r5">
+            <span>E se chover no dia da festa</span><span class="sinal" aria-hidden="true">+</span>
+          </button>
+        </h3>
+        <div class="faq-resposta" id="faq-r5">
+          <div><p>Em caso de chuva, conversamos com você para remarcar a data ou ajustar a montagem em local coberto, sempre buscando a melhor solução para o seu evento.</p></div>
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <h3 class="faq-titulo">
+          <button class="faq-pergunta" type="button" aria-expanded="false" aria-controls="faq-r6">
+            <span>Com quanto tempo de antecedência devo reservar</span><span class="sinal" aria-hidden="true">+</span>
+          </button>
+        </h3>
+        <div class="faq-resposta" id="faq-r6">
+          <div><p>Fins de semana e feriados são as datas mais disputadas, então quanto antes melhor. Para reservar, mande o dia do evento no WhatsApp: confirmada a disponibilidade, a carretinha fica separada para você.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CHAMADA FINAL ===== -->
+  <section class="cta-final revelar">
+    <div class="ceu" aria-hidden="true">
+      <div class="balao balao-c2"></div>
+      <div class="balao balao-c5"></div>
+      <div class="balao balao-c8"></div>
+    </div>
+    <div class="container container--acima">
+      <h2>Garanta a alegria da criançada</h2>
+      <p>Conte para a gente quando é a festa e respondemos com tudo o que você precisa saber.</p>
+      <a class="cta-whatsapp" href="https://api.whatsapp.com/send/?phone=5511924882904&amp;text=Ol%C3%A1%21+Vi+o+an%C3%BAncio+da+Carretinha+Playground+e+quero+garantir+a+data+da+minha+festa.+Me+envie+o+or%C3%A7amento+de+voc%C3%AAs.+A+data+ser%C3%A1%3A" target="_blank" rel="noopener noreferrer">
+        <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+        Fazer orçamento agora
+      </a>
+      <p class="disponibilidade">Envie a data e a cidade do evento para consultar a disponibilidade.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer class="rodape">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/images/logo-aj-play-park.webp" alt="Logo AJ Play Park" width="52" height="52" loading="lazy">
+          <span class="footer-nome">AJ Play Park</span>
+        </div>
+        <p class="footer-desc">Carretinha playground para festas e eventos infantis.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <a href="https://api.whatsapp.com/send/?phone=5511924882904" target="_blank" rel="noopener noreferrer">WhatsApp: (11) 92488-2904</a>
+        <a href="https://www.instagram.com/ajplaypark/" target="_blank" rel="noopener noreferrer">Instagram: @ajplaypark</a>
+        <p>Jundiaí e Itupeva - SP</p>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>© <span id="ano">2026</span> AJ Play Park • Todos os direitos reservados</p>
+      <p>
+        <a href="https://agencia.golts.com.br/politica/" target="_blank" rel="noopener noreferrer">Política de Privacidade e Cookies</a>
+        • <button class="link-cookies" id="gerenciar-cookies" type="button">Gerenciar cookies</button>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-flutuante" href="https://api.whatsapp.com/send/?phone=5511924882904&amp;text=Ol%C3%A1%21+Vi+o+an%C3%BAncio+da+Carretinha+Playground+e+quero+garantir+a+data+da+minha+festa.+Me+envie+o+or%C3%A7amento+de+voc%C3%AAs.+A+data+ser%C3%A1%3A" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp e pedir orçamento">
+  <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+</a>
+
+<!-- Bloco de dados, não é código executado. Descreve o negócio para o Google. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"AJ Play Park",
+"description":"Locação de carretinha playground completa de 2 andares para aniversários, chácaras, escolas e eventos em Jundiaí e Itupeva.",
+"image":"assets/images/logo-aj-play-park.webp","telephone":"+55-11-92488-2904","priceRange":"$$",
+"address":{"@type":"PostalAddress","addressLocality":"Jundiaí","addressRegion":"SP","addressCountry":"BR"},
+"areaServed":[{"@type":"City","name":"Jundiaí"},{"@type":"City","name":"Itupeva"}],
+"sameAs":["https://www.instagram.com/ajplaypark/"]}
+</script>
+
+<script src="assets/js/consentimento.js" defer></script>
+</body>
+</html>
