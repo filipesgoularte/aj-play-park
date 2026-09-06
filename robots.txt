@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/images/originais/
+Disallow: /scripts/
+
+Sitemap: https://ajplaypark.com.br/sitemap.xml

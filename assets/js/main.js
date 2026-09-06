@@ -168,7 +168,8 @@
       if (preferencia.matches) return;
       var rect = secao.getBoundingClientRect();
       var largura = palco.clientWidth, altura = palco.clientHeight;
-      var p = limitar(-rect.top / Math.max(1, secao.offsetHeight - altura));
+      var topoMenu = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--altura-menu')) || 0;
+      var p = limitar((topoMenu - rect.top) / Math.max(1, secao.offsetHeight - altura));
       var mobile = largura <= 700;
       // Posições-chave: direita, esquerda, direita. A rolagem reversa rebobina a cena.
       var pontos = mobile ? [[.64,.52,.88,-16],[.12,.57,1.08,18],[.64,.53,.92,-12]] : [[.73,.12,1,-15],[.05,.12,1.14,18],[.74,.08,.95,-10]];
@@ -192,7 +193,44 @@
     window.addEventListener('scroll', agendar, { passive: true });
     window.addEventListener('resize', agendar);
     preferencia.addEventListener('change', agendar);
+    if ('ResizeObserver' in window) new ResizeObserver(agendar).observe(palco);
     renderizar();
+  }
+
+  function ativarMenu() {
+    var menu = document.querySelector('.site-header');
+    if (!menu) return;
+    var secoes = document.querySelectorAll('main > header, main > section, .rodape');
+    var pendente = false;
+    function medir() {
+      document.documentElement.style.setProperty('--altura-menu', menu.getBoundingClientRect().height + 'px');
+      agendar();
+    }
+    function atualizar() {
+      pendente = false;
+      var limite = menu.getBoundingClientRect().bottom + 1;
+      var fundo = document.querySelector('.hero');
+      secoes.forEach(function (secao) {
+        var rect = secao.getBoundingClientRect();
+        if (rect.top <= limite && rect.bottom > limite) fundo = secao;
+      });
+      if (!fundo) return;
+      var palco = fundo.querySelector('.jornada-palco');
+      var cor = getComputedStyle(palco || fundo).backgroundColor;
+      menu.style.backgroundColor = cor;
+      var canais = cor.match(/[\d.]+/g);
+      var escuro = canais && (Number(canais[0]) * .2126 + Number(canais[1]) * .7152 + Number(canais[2]) * .0722) < 140;
+      menu.classList.toggle('site-header--escuro', Boolean(escuro));
+    }
+    function agendar() {
+      if (!pendente) { pendente = true; requestAnimationFrame(atualizar); }
+    }
+    medir();
+    if ('ResizeObserver' in window) new ResizeObserver(medir).observe(menu);
+    window.addEventListener('resize', medir);
+    window.addEventListener('scroll', agendar, { passive: true });
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', agendar);
+    atualizar();
   }
 
   function iniciar() {
@@ -203,6 +241,7 @@
     ativarRevelacao();
     ativarParalaxe();
     ativarJornada();
+    ativarMenu();
   }
 
   function comDom() {
